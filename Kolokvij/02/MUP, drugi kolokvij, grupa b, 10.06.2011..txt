@@ -1,0 +1,41 @@
+MUP, drugi kolokvij, grupa b, 10.06.2011.
+
+1. Napisati javascript funkciju koja ce kao argument primiti polje
+te ce kao broj elementa polja veci od 3, ispisati svaki drugi clan 
+tog polja koristeci "window.alert" metodu.
+U suprotnom neka ne ispisuje nista.
+
+2. Napisite funkciju za validaciju dolje prikazane forme. Sifra mora poceti sa znakom "A",
+ne smije biti kraci od 3 niti duza od 10 brojeva. Mora biti selektivno ili DA ili NE kod pacijenta.
+Ukoliko je doslo do greske slanje forme se mora obustaviti i ispisati se poruka greske u elementu sa ID-om "div1"
+
+<form name="form1" method="post" action="nemame.php" onsubmit="return validacija()">
+
+Sifra: <input type="text" id="text1"><br>
+Pacijent: <input type="radio" id="rad1" name="rad"> Da<br>
+	<input type="radio" id="rad2" name="rad"> Ne<br>
+<input type="submit"></form>
+
+
+3. Dolje navedenu tablicu Bolnice prikazati XML datotekom. Koristiti namespace http://www.hzzo.hr/
+
+Naziv		Adresa		Grad		Zaposlenici
+KBR Rebro	Rebro 12	Zagreb		555
+KBR Firule	Vukovarska 2	Split		444
+
+
+
+4. Napisati <script> blok koji ce unutar HTML stranice prikazati XML datoteku iz 3. zadatka
+kao tekst unutar elementa "div1". Elemente pokazati u obliku "Naziv = KBR Rebro Adresa = "Rebro 12"
+Nakon ispisa jedne bolnice preci u novi red.
+Za ucitavanje datoteke koristiti vec postojecu funkciju loadXML().
+Pretpostaviti da ima vise od 2 zapisa (koristiti petlju).
+
+
+function loadXML(file) {
+if (window.XMLHttpRequest)
+xmlhttp=new XMLHttpRequest();
+xmlhttp.open("GET",file,false);
+xmlhttp.send();
+return xmlhttp.responseXML; }
+

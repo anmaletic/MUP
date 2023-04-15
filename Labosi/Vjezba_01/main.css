@@ -1,0 +1,11 @@
+.text__italic {
+    font-style: italic;
+}
+
+.text__bold {
+    font-weight: bold;
+}
+
+.text__underline {
+    text-decoration: underline;
+}

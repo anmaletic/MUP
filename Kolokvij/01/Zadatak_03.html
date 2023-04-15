@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Kreditna kartica</title>
+    </head>
+    <body>
+        <form method="get" action="">
+            Kreditna kartica: 
+            <select name="kartice">
+                <option value="1" selected>--molimo odaberite--</option>
+                <option value="2">Visa</option>
+                <option value="3">MasterCard</option>
+            </select>
+            <br/>
+
+            Broj kartice:
+            <input type="text">
+            <br/>
+
+            Datum isteka:
+            <select name="mjesec">
+                <option value="1" selected>--</option>
+                <option value="2">01</option>
+                <option value="3">02</option>
+                <option value="4">02</option>
+            </select>       
+            <select name="godina">
+                <option value="1" selected>----</option>
+                <option value="2">2023</option>
+                <option value="3">2024</option>
+                <option value="4">2025</option>
+            </select>
+            <br/>
+
+            Trebate R1 Račun:
+            <input type="radio" name="r1" value="Da"/>Da
+            <input type="radio" name="r1" value="Ne" checked/>Ne
+            <br/>
+
+            Poslati račun na adresu:
+            <input type="checkbox" checked/>
+            <br/>
+
+            Napomene:
+            <textarea></textarea>
+        </form>        
+    </body>
+</html>

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="main.css">
+
+  <title>Document</title>
+</head>
+<body>
+  <table> 
+
+    <thead>
+      <tr>
+        <th style="text-transform: uppercase;" colspan="8">Raspored sati</th>
+      </tr>
+      <tr>
+        <th class="tableHeader2"></th>
+        <th class="tableHeader2">Ponedjeljak</th>
+        <th class="tableHeader2">Utorak</th>
+        <th class="tableHeader2">Srijeda</th>
+        <th class="tableHeader2">Četvrtak</th>
+        <th class="tableHeader2">Petak</th>
+        <th class="tableHeader2">Subota</th>
+        <th class="tableHeader2">Nedjelja</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>8:00 - 9:35</td>
+        <td rowspan="3" style="background-color: yellow;">
+          od 24.1. OS pred
+          od 8-10h dv5 i od
+          10-11:20h dv9
+        </td>
+        <td></td>
+        <td rowspan="3"></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr >
+        <td rowspan="2">9:45 - 11:20</td>
+        <td></td>
+        <td rowspan="2" style="background-color: yellow;">OS vj gr I 1 lab2</td>
+        <td></td>
+        <td style="background-color: purple;"> SPA vj lab3</td>
+        <td rowspan="2"></td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td></td>
+        <td style="background-color: purple;">SPA pred dv5</td>
+      </tr>
+
+      <tr>
+        <td>11:30 - 13:05</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td style="background-color: yellow;">OS vj gr I 2 lab2</td>
+        <td></td>
+        <td style="background-color: purple;">SPA pred dv5</td>
+        <td></td>
+      </tr>
+
+      <tr>        
+        <td>13:15 - 14:50</td>
+        <td style="background-color: #add8e6;">
+          Baze1 vj gr I 1<br/>
+          lab2
+        </td>
+        <td style="background-color: red;">Mup vj lab2</td>
+        <td></td>
+        <td style="background-color: lightgreen;">Eng P dv.8 vet</td>
+        <td rowspan="2" style="background-color: #add8e6;">Baze1 pred dv3</td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <td>15:00 - 16:35</td>
+        <td style="background-color: #add8e6;">
+          Baze1 vj gr I 2<br/>
+          lab2
+        </td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr style="background-color: grey;">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+  </table>
+</body>
+</html>
+
+
+
+<style>
+  
+ table {
+    margin: 0 auto;
+    border-style: solid;
+    border-color: #b6b6b6;
+    padding: 20;
+  }
+
+  td {
+    border: 1px inset #b6b6b6;
+    border-collapse: separate;
+    width: 115px;
+  }
+
+  .tableHeader2 {
+    background-color: black;
+    text-transform: uppercase;
+    font-weight: 100;
+    color:white;
+    align-items: center;
+  }
+  .tableCell {
+    background-color: white;
+    color:white;
+    align-items: center;
+  }
+
+
+  td:empty::after {
+    content: "\00a0";
+  }
+</style>

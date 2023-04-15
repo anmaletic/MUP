@@ -1,0 +1,44 @@
+MUP, drugi kolokvij, grupa b, 10.06.2011.
+
+1. Napisati javascript funkciju koja ce kao argument primiti objekt 
+te ce ispisati vrijednosti njegova svojstva u obliku "ime svojstva = vrijednost".
+Ispis ce se vrsiti unutar web stranice u elementu sa IDom div1 (koristiti getElementByID metodu)
+
+
+
+2. Napisite funkciju za validaciju dolje prikazane forme. E-mail ne smije biti prazan, ne smije biti
+duzi od 30 znakova i mora sadrzavati znak "@".
+Jedna od mogucnosti obavjesti mora biti selektirana (DA ili NE).
+Ukoliko je doslo do greske slanje forme se mora obustaviti 
+i ispisati se poruka greske u elementu sa ID-om "p1"
+
+
+<form name="form1" method="post" action="nemame.php" onsubmit="return validacija()">
+
+E-mail: <input type="text" id="text1"><br>
+Obavijest: <input type="radio" id="rad1" name="rad"> Da<br>
+	<input type="radio" id="rad2" name="rad"> Ne<br>
+<input type="submit"></form>
+
+
+3. Dolje navedenu tablicu Bolnice prikazati XML datotekom. Koristiti namespace http://www.nekretnine.com/
+
+ID		Adresa		Grad		Tip
+1121		Rebro 12	Zagreb		Stan
+2211		Vukovarska 2	Split		Kuca
+
+
+
+4. Napisati <script> blok koji ce unutar HTML stranice prikazati XML datoteku iz 3. zadatka
+kao tablicu.
+Za ucitavanje datoteke koristiti vec postojecu funkciju loadXML().
+Pretpostaviti da ima vise od 2 zapisa (koristiti petlju).
+
+
+function loadXML(file) {
+if (window.XMLHttpRequest)
+xmlhttp=new XMLHttpRequest();
+xmlhttp.open("GET",file,false);
+xmlhttp.send();
+return xmlhttp.responseXML; }
+

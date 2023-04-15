@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Moj naslov</h1>
+    <input type="button" value="Kliknite ovdje" onclick="window.alert('Kliknuli ste')">
+
+    <button id="demoInc" onclick="document.getElementById('demoInc').innerHTML = 'Count: ' + i++">Count</button>
+
+    <button onclick="Calculate()">Izracunaj</button>
+
+    <p id="demo"></p>
+</body>
+</html>
+
+<script>
+    i = 0;
+
+    const price1 = 5;
+    const price2 = 6;
+
+    let total = price1 + price2 + i;
+
+    document.getElementById("demo").innerHTML = "The total is: " + total;
+
+    function Calculate() {        
+        document.getElementById("demo").innerHTML = "The total is: " + (price1 + price2 + i);
+    }
+
+    const a = 8;
+    const b = 6;
+
+    let rezultat = a + b
+    document.getElementById("demo").innerHTML = "Rezultat je: " + rezultat;
+
+    const arr = [ 'string', 42, function() {console.log('hi')}]
+
+    arr[2]()
+    for (let i = 0; i < arr.length; i++){
+        console.log(arr[i])
+    }
+
+
+</script>

@@ -1,0 +1,45 @@
+.myDiv {
+    margin-left: 50px;
+}
+.nav {		
+    margin: auto;
+    padding: 15px;
+    background: linear-gradient(to right, #ffffff, #00458af3,#00458af3,#00458af3, #ffffff)
+}
+.navDiv {
+    margin: auto;
+    width:max-content;
+}
+.navLink {
+    color: aliceblue;
+    margin: 15px;
+    font-size: 18px;
+    font-weight: bold;
+}
+.imgDiv {
+    margin: 15px;
+}
+.titleStyle {
+    margin: 0px
+}
+.imageStyle {
+    border: 2px outset #112233;
+    margin-right: 25px;
+}
+.bgImage {    
+    background-image: url('/Resources/25332.jpg');
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+.footer {
+    border-top: 2px black outset;
+    margin: 10px;
+    position:absolute;
+    width: 97%;
+    bottom:0;
+}
+.center {
+    margin: auto;
+    width: 50%;
+    padding: 10px;
+  }
