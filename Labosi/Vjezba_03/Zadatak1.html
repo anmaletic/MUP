@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Vjezba 3</title>
+</head>
+<body>
+    <header>
+            <img alt="logo_vsite" src="\Labosi\Vjezba_03\logo.jpg" style="height: 49px; padding-left: 10px; padding-top:1px; position: absolute;">
+            <h4 class="title">Visoka škola za informacijske tehnologije Zagreb</h4>
+    </header>
+
+    <form action="" method="post">
+        <!-- Podaci o korisniku -->
+        <table>
+            <thead>
+                <th colspan="2">Podaci o korisniku</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Polja označena sa zvijezdicom su obavezna</td>
+                </tr>
+                <tr>
+                    <td class="form_label">Korisničko ime:*</td>
+                    <td class="form_data"><input name="korisnickoIme" type="text" required="required" ></td>              
+                </tr>
+                <tr>
+                    <td>E-mail adresa:*</td>    
+                    <td><input name="email" type="email" required="required" ></td>                
+                </tr>
+                <tr>
+                    <td>Nova šifra:*</td>
+                    <td><input name="lozinka" type="password" required="required"></td>     
+                </tr>
+                <tr>
+                    <td>Nova šifra ponovno:*</td>
+                    <td><input name="lozinkaPonovo" type="password" required="required"></td>     
+                </tr>
+            </tbody>    
+        </table>
+
+        <!-- Profil korisnika -->
+        <table>
+            <thead>
+                <th colspan="2">Profil korisnika</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ove informacije će biti prikazane javno</td>
+                </tr>
+                <tr>
+                    <td class="form_label">ICQ Broj:</td>
+                    <td class="form_data"><input name="icq" type="text"></td>              
+                </tr>
+                <tr>
+                    <td>Yahoo Messenger:</td>    
+                    <td><input name="yahoo" type="text"></td>                
+                </tr>
+                <tr>
+                    <td>Web lokacija:</td>
+                    <td><input name="weblokacija" type="text"></td>     
+                </tr>
+                <tr>
+                    <td>Lokacija:</td>
+                    <td><input name="lokacija" type="text"></td>     
+                </tr>                
+                <tr>
+                    <td>Zanimanje:</td>
+                    <td><input name="zanimanje" type="text"></td>     
+                </tr>
+                <tr>
+                    <td>
+                        Ovaj dio teksta može se <br>
+                        dodati na poslanu poruku <br>
+                        (Najveće dužine 255 znakova)
+                    </td>
+                    <td>
+                        <textarea name="dodatno" rows="5"></textarea> 
+                </tr>
+                <tr>
+                    <td>Aktivnosti:</td>
+                    <td>
+                        <select name="aktivnosti" multiple size="5">
+                            <option value="1">Programiranje Java Scripti</option>
+                            <option value="2">Traženje po WEB-u</option>
+                            <option value="3">Ispijanje pivi</option>
+                            <option value="4">Dosađivanje prijateljima</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>    
+        </table>
+
+        <!-- Postavke -->
+        <table>
+            <thead>
+                <th colspan="2">Postavke</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="form_label">Prikaži e-mail adresu:</td>
+                    <td class="form_data">
+                        <input name="rEmail" type="radio">Da
+                        <input name="rEmail" type="radio" checked="checked">Ne
+                    </td>              
+                </tr>
+                <tr>
+                    <td>Prikaži online status:</td>    
+                    <td>
+                        <input name="rOnline" type="radio">Da
+                        <input name="rOnline" type="radio" checked="checked">Ne
+                    </td>                    
+                </tr>
+                <tr>
+                    <td>Obavijesti me o dolaznim porukama:</td>
+                    <td>
+                        <input name="rObavijest" type="radio">Da
+                        <input name="rObavijest" type="radio" checked="checked">Ne
+                    </td>  
+                </tr>
+                <tr>
+                    <td>
+                        Pošalji e-mail kada netko odgovori na odaslanu poruku: <br>
+                        Ova opcija može se promjeniti i kasnije.
+                    </td>
+                    <td>
+                        <input name="rPošaljiEmail" type="radio">Da
+                        <input name="rPošaljiEmail" type="radio" checked="checked">Ne
+                    </td>  
+                </tr>
+                <tr>
+                    <td>Obavijesti me o privatnim porukama:</td>
+                    <td>
+                        <input name="rPrivat" type="radio" checked="checked">Da
+                        <input name="rPrivat" type="radio">Ne
+                    </td>  
+                </tr>
+                <tr>
+                    <td>
+                        Prikaži prozor za novu privatnu poruku: neki predložci <br>
+                        mogu otvoriti novi prozor da vas upozore na novu poruku.
+                    </td>
+                    <td>
+                        <input name="rPrikaziProzor" type="radio" checked="checked">Da
+                        <input name="rPrikaziProzor" type="radio">Ne
+                    </td>  
+                </tr>
+                <tr>
+                    <td>Dodaj potpis:</td>
+                    <td>
+                        <input name="rPotpis" type="radio" checked="checked">Da
+                        <input name="rPotpis" type="radio">Ne
+                    </td>  
+                </tr>
+                <tr>
+                    <td>Dozvoli BBCode:</td>
+                    <td>
+                        <input name="rBBC" type="radio" checked="checked">Da
+                        <input name="rBBC" type="radio">Ne
+                    </td>  
+                </tr>
+                <tr>
+                    <td>Dozvoli HTML:</td>
+                    <td>
+                        <input name="rHTML" type="radio" checked="checked">Da
+                        <input name="rHTML" type="radio">Ne
+                    </td>  
+                </tr>
+                <tr>
+                    <td>Prikaži emocijske znakove (smajlove):</td>
+                    <td>
+                        <input name="rEmo" type="radio" checked="checked">Da
+                        <input name="rEmo" type="radio">Ne
+                    </td>  
+                </tr>
+                <tr>
+                    <td>Prikaži brzu odgovornu formu:</td>
+                    <td>
+                        <input name="rBrzaForma" type="radio" checked="checked">Da
+                        <input name="rBrzaForma" type="radio">Ne
+                    </td>  
+                </tr>
+                <tr>
+                    <td>Jezik:</td>
+                    <td>
+                        <select name="jezik">
+                            <option value="1" selected="selected">English</option>
+                            <option value="2">Croatian</option>
+                        </select>
+                    </td>  
+                </tr>
+                <tr>
+                    <td>Boja forme:</td>
+                    <td>
+                        <select name="boja">
+                            <option value="1" selected="selected">Plavo</option>
+                            <option value="2">Crveno</option>
+                            <option value="3">Zeleno</option>
+                            <option value="4">Žuto</option>
+                        </select>
+                    </td>  
+                </tr>
+                <tr>
+                    <td>Vremenska zona:</td>
+                    <td>                        
+                        <select name="boja">
+                            <option value="1" selected="selected">GMT + 1 Hour</option>
+                            <option value="2">GMT + 2 Hour</option>
+                            <option value="3">GMT + 3 Hour</option>
+                            <option value="4">GMT + 4 Hour</option>
+                        </select>
+                    </td>  
+                </tr>
+            </tbody>    
+        </table>
+
+        <!-- Postavke slike -->
+        <table>
+            <thead>
+                <th colspan="2">Postavke osobne slike</th>
+            </thead>
+            <tbody>
+                <tr style="text-align: right;">
+                    <td>Prikaži malu sliku ispod detalja u poruci</td>
+                    <td>
+                        Trenutna slika:<br>
+                        <input name="izbrisiSliku" type="checkbox">Izbriši
+                    </td>
+                </tr>
+                <tr>
+                    <td class="form_label">Učitaj osobnu sliku sa računala:</td>
+                    <td class="form_data"><input name="slika" type="file" ></td>              
+                </tr>
+            </tbody>    
+        </table>
+
+        <!-- Submit / Reset-->
+        <table>
+            <tr>
+                <td class="form_label"></td>
+                <td class="form_data">
+                    <input type="submit" >
+                    <input type="reset" >
+                </td>
+            </tr>
+        </table>
+
+    </form>
+</body>
+</html>
