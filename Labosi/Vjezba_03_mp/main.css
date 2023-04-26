@@ -1,0 +1,54 @@
+section {
+  margin: 0 auto;
+  width: 984px;
+}
+
+p.korisnik {
+  margin-left: 55%;
+}
+
+p.korisnik:not(:first-child) {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+div.vertical-align {
+  display: flex;
+  align-items: center;
+}
+
+label {
+  display: inline-block;
+  width: 55%;
+}
+
+input + label {
+  display: inline;
+}
+
+.personal_picture {
+  display: flex;
+}
+
+.personal_picture > p {
+  width: 50%;
+  text-align: right;
+}
+
+.delete_picture {
+  text-align: right;
+}
+
+div > input[type="submit"] {
+  margin-left: 55%;
+}
+
+div.fields_container:last-of-type div:last-of-type {
+  margin-top: 20px;
+}
