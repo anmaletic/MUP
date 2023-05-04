@@ -5,13 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        #data {
+            margin-top: 20px;
+        }
+
+        .p_name {
+            display: inline;
+        }
+
+        .img_flag {
+            display: inline;
+            width: 30px;
+            height: 14px;
+            margin-right: 10px;
+            margin-top: 5px;
+        }
+    </style>
 </head>
 <body>
     <button onclick="showCountries()">Show Countries</button>
     <div id="data"></div>
-
-    <p id="flag" style="display: inline">DEMO</p>
-    <p id="name" style="display: inline">DEMO</p>
 
     <script>
         function showCountries() {
@@ -28,12 +43,11 @@
 
                     for(let x = 0; x < countries.length; x++){
                         var tagFlag = document.createElement("img");
+                        tagFlag.classList = "img_flag"
                         tagFlag.src = countries[x].flags.png;
-                        tagFlag.height = 14;
-                        tagFlag.style = "display : inline; width: 30px; margin-right: 10px;";
 
                         var tagName = document.createElement("p");
-                        tagName.style = "display : inline";
+                        tagName.classList = "p_name";
                         var textName = document.createTextNode(countries[x].name.common);
                         tagName.appendChild(textName);
                         
