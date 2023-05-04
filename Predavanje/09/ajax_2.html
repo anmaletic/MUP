@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="showCountries()">Show Countries</button>
+    <div id="data"></div>
+
+    <p id="flag" style="display: inline">DEMO</p>
+    <p id="name" style="display: inline">DEMO</p>
+
+    <script>
+        function showCountries() {
+            let xhr = new XMLHttpRequest;
+            let countries;
+
+            xhr.open("Get", "https://restcountries.com/v3.1/all", true);
+            xhr.onload = function() {
+                if (xhr.status == 200) {
+                    console.log("success");
+                    countries = JSON.parse(this.response);
+                    console.log(countries);
+
+
+                    for(let x = 0; x < countries.length; x++){
+                        var tagFlag = document.createElement("img");
+                        tagFlag.src = countries[x].flags.png;
+                        tagFlag.height = 14;
+                        tagFlag.style = "display : inline; width: 30px; margin-right: 10px;";
+
+                        var tagName = document.createElement("p");
+                        tagName.style = "display : inline";
+                        var textName = document.createTextNode(countries[x].name.common);
+                        tagName.appendChild(textName);
+                        
+                        document.getElementById("data").appendChild(tagFlag);
+                        document.getElementById("data").appendChild(tagName);                        
+                        document.getElementById("data").appendChild(document.createElement("br"));
+                    };
+                }
+            }
+
+            xhr.send();
+
+        }
+    </script>
+</body>
+</html>
