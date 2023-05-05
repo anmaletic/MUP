@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #dataList {
+            height: 500px;
+            overflow: auto;
+        }
+        #dataList > li {
+            transform: scale(0.85);
+        }
+
+        #dataList > span {
+            height: 22px;
+        }
+
+        #dataList > li:hover {
+            cursor: pointer;
+            margin-left: 30px;
+            transform: scale(1);
+            transition: 0.3s;
+        }
+
+        .container {
+            display: flex;
+        }
+
+        .col {
+            flex : 50%;
+            width: fit-content;
+            margin-left: 50px;
+        }
+
+        .img_flag {
+            width: 30px;
+            height: 22px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="showCountries()">Show Countries</button>
+
+    <div class="container">
+
+        
+        <ul id="dataList">
+        </ul>
+
+        <div id="detailsDiv" class="col">
+            <h3 id="selectedCountryName"></h3>
+            <h4 id="selectedCountryNameOfficial"></h4>
+            <img id="selectedCountryFlag">
+            <ul style="list-style-type: none;">
+                <li id="selectedCountryPop"></li>
+                <li id="selectedCountryCapital"></li>
+            </ul>
+        </div>
+    </div>    
+    
+    <script>
+        function showCountries() {
+            let xhr = new XMLHttpRequest;
+            let countries;
+
+            xhr.open("Get", "https://restcountries.com/v3.1/all", true);
+            xhr.onload = function() {
+                if (xhr.status == 200) {
+                    console.log("success");
+                    countries = JSON.parse(this.response);
+                    console.log(countries);
+
+                    for(let x = 0; x < countries.length; x++){
+                       
+                        /*  Create Flag element  */
+                        var tagFlag = document.createElement("img");
+                        tagFlag.classList = "img_flag"
+                        tagFlag.src = countries[x].flags.png;
+                        
+                        /*  Create CountryName element  */
+                        var tagName = document.createElement("span");
+                        var textName = document.createTextNode(countries[x].name.common);
+                        tagName.appendChild(textName);
+                        
+                        /*  Using list*/
+                        /*  Create new ListItem <li>
+                            Append Flag and CountryName elements to <li>
+                            Append created element to <ul> with id dataList  */
+
+                        var item = document.createElement("li");
+                        /* item.onclick = showDetails(countries[x]); */  /* iz nekog razloga ne radi..onload klikne sve drzave i nakon toga onclick ne radi.. todo */
+
+                        item.onclick = function() {
+                            console.log(countries[x].name.common);
+                            document.getElementById("selectedCountryName").innerHTML = countries[x].name.common;
+                            document.getElementById("selectedCountryNameOfficial").innerHTML = countries[x].name.official;
+                            document.getElementById("selectedCountryFlag").src = countries[x].flags.png;
+                            document.getElementById("selectedCountryPop").innerHTML = `Population: ${countries[x].population}`;
+                            document.getElementById("selectedCountryCapital").innerHTML = `Capital: ${countries[x].capital} (${countries[x].capitalInfo.latlng[0]}, ${countries[x].capitalInfo.latlng[1]})`;                            
+                        };
+
+                        item.appendChild(tagFlag);
+                        item.appendChild(tagName);
+                        document.getElementById("dataList").appendChild(item);
+                    };
+                }
+            }
+            xhr.send();
+        }
+
+        function showDetails(country){
+            console.log(country.name.common);
+            document.getElementById("selectedCountryName").innerHTML = country.name.common;
+            document.getElementById("selectedCountryNameOfficial").innerHTML = country.name.official;
+            document.getElementById("selectedCountryFlag").src = country.flags.png;
+            document.getElementById("selectedCountryPop").innerHTML = `Population: ${country.population}`;
+            document.getElementById("selectedCountryCapital").innerHTML = `Capital: ${country.capital} (${country.capitalInfo.latlng[0]}, ${country.capitalInfo.latlng[1]})`;                            
+        }
+    </script>
+</body>
+</html>
