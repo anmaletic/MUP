@@ -7,12 +7,12 @@
     <title>Document</title>
 
     <style>
-        #data {
-            margin-top: 20px;
+        .container {
+            display: flex;
         }
 
-        .p_name {
-            display: inline;
+        .col {
+            flex : 50%;
         }
 
         .img_flag {
@@ -26,8 +26,15 @@
 </head>
 <body>
     <button onclick="showCountries()">Show Countries</button>
-    <div id="data"></div>
 
+    <div class="container">
+        <div id="dataDiv" class="col">
+        </div>
+        
+        <ul id="dataList" class="col">
+        </ul>
+    </div>    
+    
     <script>
         function showCountries() {
             let xhr = new XMLHttpRequest;
@@ -40,26 +47,37 @@
                     countries = JSON.parse(this.response);
                     console.log(countries);
 
-
                     for(let x = 0; x < countries.length; x++){
+                       
+                        /*  Create Flag element  */
                         var tagFlag = document.createElement("img");
                         tagFlag.classList = "img_flag"
                         tagFlag.src = countries[x].flags.png;
-
-                        var tagName = document.createElement("p");
-                        tagName.classList = "p_name";
+                        
+                        /*  Create CountryName element  */
+                        var tagName = document.createElement("span");
                         var textName = document.createTextNode(countries[x].name.common);
                         tagName.appendChild(textName);
                         
-                        document.getElementById("data").appendChild(tagFlag);
-                        document.getElementById("data").appendChild(tagName);                        
-                        document.getElementById("data").appendChild(document.createElement("br"));
+                        /*  Using div  */
+                        /*  Append Flag and CountryName elements to <div> with id dataDiv */
+                        document.getElementById("dataDiv").appendChild(tagFlag);
+                        document.getElementById("dataDiv").appendChild(tagName);      
+                        document.getElementById("dataDiv").appendChild(document.createElement("br"));
+
+                        /*  Using list*/
+                        /*  Create new ListItem <li>
+                            Append Flag and CountryName elements to <li>
+                            Append created element to <ul> with id dataList  
+                            Also using cloneNode, because multiple parents cant have same child  */
+                        var item = document.createElement("li");
+                        item.appendChild(tagFlag.cloneNode(true));
+                        item.appendChild(tagName.cloneNode(true));
+                        document.getElementById("dataList").appendChild(item);
                     };
                 }
             }
-
             xhr.send();
-
         }
     </script>
 </body>
