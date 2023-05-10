@@ -64,6 +64,7 @@
     </div>    
     
     <script>
+
         function showCountries() {
             let xhr = new XMLHttpRequest;
             let countries;
@@ -90,20 +91,10 @@
                         /*  Using list*/
                         /*  Create new ListItem <li>
                             Append Flag and CountryName elements to <li>
-                            Append created element to <ul> with id dataList  */
-
+                            Append created element to <ul> with id dataList  */                                
                         var item = document.createElement("li");
-                        /* item.onclick = showDetails(countries[x]); */  /* iz nekog razloga ne radi..onload klikne sve drzave i nakon toga onclick ne radi.. todo */
-
-                        item.onclick = function() {
-                            console.log(countries[x].name.common);
-                            document.getElementById("selectedCountryName").innerHTML = countries[x].name.common;
-                            document.getElementById("selectedCountryNameOfficial").innerHTML = countries[x].name.official;
-                            document.getElementById("selectedCountryFlag").src = countries[x].flags.png;
-                            document.getElementById("selectedCountryPop").innerHTML = `Population: ${countries[x].population}`;
-                            document.getElementById("selectedCountryCapital").innerHTML = `Capital: ${countries[x].capital} (${countries[x].capitalInfo.latlng[0]}, ${countries[x].capitalInfo.latlng[1]})`;                            
-                        };
-
+                        
+                        item.onclick = () => showDetails(countries[x]);
                         item.appendChild(tagFlag);
                         item.appendChild(tagName);
                         document.getElementById("dataList").appendChild(item);
@@ -115,7 +106,7 @@
 
         function showDetails(country){
             console.log(country.name.common);
-            document.getElementById("selectedCountryName").innerHTML = country.name.common;
+            document.getElementById("selectedCountryName").innerHTML = country.name.common;        
             document.getElementById("selectedCountryNameOfficial").innerHTML = country.name.official;
             document.getElementById("selectedCountryFlag").src = country.flags.png;
             document.getElementById("selectedCountryPop").innerHTML = `Population: ${country.population}`;
