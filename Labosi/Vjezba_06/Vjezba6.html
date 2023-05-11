@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+	<head>
+		<title>MUP - Vježba 6 - Zadatak 1</title>
+		<meta name="GENERATOR" content="Microsoft Visual Studio.NET 7.0">
+		<meta name="vs_targetSchema" content="http://schemas.microsoft.com/intellisense/ie5">
+		<script src="script_main.js" defer ></script>
+		<style type="text/css">
+		body{
+			margin-left: auto;
+			margin-right: auto;
+		}
+		#slika{
+			background-image: url('vsite_hr.JPG');
+			width: 984px;
+			height: 57px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		h3, h4{
+			text-align: center;
+		}
+		#field1{
+			width:800px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		table{
+			width: 600px;
+			margin-left: auto;
+			margin-right: auto;
+			border: 0px;
+			padding: 4px;
+			border-spacing: 4px;
+		}
+		#sat{
+			margin-left: auto;
+			margin-right: auto;
+			width: 100px;
+		}
+		#poruka{
+			color: gray;
+			margin-left: 10px;
+		}
+		</style>
+	</head>
+	<body id="stranica" onload="vrijeme()" bgColor="#ffff99">
+		<p id="slika"></p>
+		<h3>Mup - Vježba broj 6</h3>
+		<h4>Zadatak 1. Kontrola unosa podataka pomoću JavaScript jezika
+		</h4>
+		<div id="sat"></div>
+		<hr>
+		<div id="poruka">Podaci označeni sa "*" nužni su prilikom ispunjavanja prijave
+		</div>
+		<hr>
+		</br>
+		<form name="form1" action="ok.html" onsubmit="return(provjera());">
+			<fieldset id="field1">
+				<legend>
+					Podaci za prijavu
+				</legend>
+				<table>
+					<tr>
+						<td id="ime">
+							*Ime:<br/>
+							<input type="text" size="32" style="WIDTH: 229px; HEIGHT: 22px" id="cime" NAME="cime" onmouseover="boldon('ime')" onmouseout="boldoff('ime')" onblur="checkName();"></input>
+						</td>
+						<td id="Password1">
+							*Zaporka:<br/>
+							<INPUT type="password" size="31" style="WIDTH: 220px; HEIGHT: 22px" ID="cPassword1" NAME="cPassword1" onmouseover="boldon('Password1')" onmouseout="boldoff('Password1')" ></input>
+						</td>
+					</tr>
+					<tr>
+						<td id="email">
+							*E-mail adresa:<br/>
+							<input type="text" size="33"id="cemail" style="WIDTH: 230px; HEIGHT: 22px" name="cemail" onmouseover="boldon('email')" onmouseout="boldoff('email')" onblur="checkMail();"></input>
+						</td>
+						<td id="Password2">
+							*Zaporka ponovno:<br/>
+							<input type="password" size="31" style="WIDTH: 220px; HEIGHT: 22px" ID="cPassword2" NAME="cPassword2" onmouseover="boldon('Password2')" onmouseout="boldoff('Password2')" onblur="checkPassword()"></input>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<fieldset>
+								<legend tabIndex="4">
+									*Veza prema internetu:
+								</legend>
+								<input type="checkbox" ID="Checkbox1" NAME="Checkbox1" value="1">Analogni modem 56k</input>
+								<br/>
+								<input type="checkbox" ID="Checkbox2" NAME="Checkbox2" value="2">Digitalni modem ISDN</input>
+								<br/>
+								<input type="checkbox" ID="Checkbox3" NAME="Checkbox3" value="3">ADSL</input>
+								<br/>
+								<input type="checkbox" ID="Checkbox4" NAME="Checkbox4" value="4">Lokalna mreža</input>
+								<br/>
+							</fieldset>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<fieldset>
+								<legend tabIndex="5">
+									*Moj web preglednik:</legend>
+								<input type="radio" id="Radio1" name="r1" VALUE="NN" tabIndex="6"> Netscape Navigator:</input>
+								<br/>
+								<input type="radio" id="Radio2" name="r1" VALUE="IE" tabIndex="6"> Internet Explorer:</input>
+								<br/>
+								<input type="radio" id="Radio3" name="r1" VALUE="DR" tabIndex="6"> Neki drugi:</input>
+								<br/>
+							</fieldset>
+						</td>
+						<td align="middle">
+							<fieldset>
+								<legend tabIndex="7">
+									Moja omiljena boja:</legend>
+								<select id="boja" name="boja" onchange="boja_stranice();" tabIndex="7">
+									<option value="#ffff99" selected>...</option>
+									<option value="blue" title="blue">plava</option>
+									<option value="red">crvena</option>
+									<option value="green">zelena</option>
+									<option value="white">bijela</option>
+								</select>
+							</fieldset>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" align="middle">
+							<input type="submit" id="submit" value="Prihvati"></input>&nbsp;&nbsp;&nbsp;&nbsp;<input type="reset" id="reset" value="Poništi"></input>
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+		</form>
+	</body>
+</html>
+
