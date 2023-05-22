@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<weather_forecast>
+  <forecast>
+    <location>
+      <city>Los Angeles</city>
+      <state>CA</state>
+    </location>
+    <date>May 11, 2023</date>
+    <temperature>
+      <high>80</high>
+      <low>62</low>
+    </temperature>
+    <precipitation>20</precipitation>
+  </forecast>
+  
+  <forecast>
+    <location>
+      <city>New York</city>
+      <state>NY</state>
+    </location>
+    <date>May 11, 2023</date>
+    <temperature>
+      <high>70</high>
+      <low>52</low>
+    </temperature>
+    <precipitation>50</precipitation>
+  </forecast>
+  
+  <forecast>
+    <location>
+      <city>Chicago</city>
+      <state>IL</state>
+    </location>
+    <date>May 11, 2023</date>
+    <temperature>
+      <high>60</high>
+      <low>42</low>
+    </temperature>
+    <precipitation>80</precipitation>
+  </forecast>
+</weather_forecast>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<artikli>
+    <d1:autogume xmlns:d1="dobavljac1">
+        <d1:guma>
+            <d1:proizvodjac>Goodyear</d1:proizvodjac>
+            <d1:model>Club</d1:model>
+            <d1:id>1234</d1:id>
+            <d1:cijena>300</d1:cijena>
+        </d1:guma>
+        <d1:guma>
+            <d1:proizvodjac>Sava</d1:proizvodjac>
+            <d1:model>Efeckta</d1:model>
+            <d1:id>1235</d1:id>
+            <d1:cijena>250</d1:cijena>
+        </d1:guma>
+    </d1:autogume>
+    <d2:amortizeri xmlns:d2="dobavljaci2">
+        <d2:amortizer>
+            <d2:proizvodjac>Monroe</d2:proizvodjac>
+            <d2:model>Sensatrack</d2:model>
+            <d2:id>2331</d2:id>
+            <d2:cijena>400</d2:cijena>
+        </d2:amortizer>
+        <d2:amortizer>
+            <d2:proizvodjac>QH</d2:proizvodjac>
+            <d2:model>unknown</d2:model>
+            <d2:id>2332</d2:id>
+            <d2:cijena>200</d2:cijena>
+        </d2:amortizer>
+    </d2:amortizeri>
+</artikli>

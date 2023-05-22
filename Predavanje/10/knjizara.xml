@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--  ovaj dokument je kreiran u srijedu ujutro pod gablecom nom nom -->
+<knjizara>
+    <knjiga kategorija="odrasli">
+        <naslov>Na rubu pameti</naslov>
+        <autor>M. Krleža</autor>
+        <godina>1956</godina>
+        <cijena>9.98</cijena>
+    </knjiga>
+    <knjiga kategorija="ekonomija">
+        <naslov>Povijest ekonomskih doktrina</naslov>
+        <autor>V. Lunaček</autor>
+        <godina>1944</godina>
+        <cijena>12.56</cijena>
+    </knjiga>
+    <knjiga kategorija="informatika">
+        <naslov>Teorija informacijske znanosti</naslov>
+        <autor>M. Tuđman</autor>
+        <godina>1990</godina>
+        <cijena>8.23</cijena>
+    </knjiga>
+</knjizara>

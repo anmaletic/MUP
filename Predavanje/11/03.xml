@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<skupina>
+    <student>
+        <ime>Marko</ime>
+        <prezime>Horvat</prezime>
+        <dob>20</dob>
+    </student>
+    <student>
+        <ime>Marica</ime>
+        <prezime>Horvatić</prezime>
+        <dob>20</dob>
+    </student>
+</skupina>

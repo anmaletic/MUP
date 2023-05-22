@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<evidencija>
+    <student>
+        <Ime>Antonio</Ime>
+        <Prezime>Maletić</Prezime>
+        <OIB>12343282781</OIB>
+        <StudId>2020010</StudId>
+    </student>
+    <student>
+        <Ime>Mladen</Ime>
+        <Prezime>Ljubić</Prezime>
+        <OIB>87462768271</OIB>
+        <StudId>2020015</StudId>
+    </student>
+    <student>
+        <Ime>Tomislav</Ime>
+        <Prezime>Pavić</Prezime>
+        <OIB>67839476543</OIB>
+        <StudId>2020008</StudId>
+    </student>
+</evidencija>

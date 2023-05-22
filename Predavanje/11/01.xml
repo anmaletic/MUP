@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<elem>
+    <h:tablica xmlns:h="http://www.skolskaknjiga.hr">
+        <h:artikli>Knjige</h:artikli>
+        <h:artikli>Olovke</h:artikli>
+    </h:tablica>
+    <f:tablica xmlns:f="http://www.vsite.hr">
+        <f:Student>Marko</f:Student>
+        <f:OIB>1212121</f:OIB>
+    </f:tablica>
+</elem>
