@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Nekretnine xmlns:n="http://www.nekretnine.com/">
+    <n:nekretnina>
+        <n:id>1211</n:id>
+        <n:adresa>Vukovarska 121</n:adresa>
+        <n:grad>Zagreb</n:grad>
+        <n:tip>Biograd</n:tip>
+    </n:nekretnina>
+    <n:nekretnina>
+        <n:id>2123</n:id>
+        <n:adresa>Horvatova 13 </n:adresa>
+        <n:grad>Stan</n:grad>
+        <n:tip>Kuća</n:tip>
+    </n:nekretnina>
+</Nekretnine>
