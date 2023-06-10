@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<nekretnine xmlns:h="http://www.nekretnine.hr">
+    <h:nekretnina>
+        <h:ID> 1211 </h:ID>
+        <h:Adresa> Vukovarska 121 </h:Adresa>
+        <h:Grad> Zagreb </h:Grad>
+        <h:Tip> Stan </h:Tip>
+    </h:nekretnina>
+    <h:nekretnina>
+        <h:ID> 2123 </h:ID>
+        <h:Adresa> Horvatova 12 </h:Adresa>
+        <h:Grad> Biograd </h:Grad>
+        <h:Tip> Kuca </h:Tip>
+    </h:nekretnina>
+</nekretnine>
