@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<nekretnine xmlns:n="http://www.nekretnine.com/">
+    <n:nekretnina>
+        <n:id>1121</n:id>
+        <n:adresa>Rebro 12</n:adresa>
+        <n:grad>Zagreb</n:grad>
+        <n:tip>Stan</n:tip>
+    </n:nekretnina>
+    <n:nekretnina>
+        <n:id>2211</n:id>
+        <n:adresa>Vukovarska 2</n:adresa>
+        <n:grad>Split</n:grad>
+        <n:tip>Kuca</n:tip>
+    </n:nekretnina>
+</nekretnine>

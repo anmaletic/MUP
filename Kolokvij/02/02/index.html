@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kolokvij</title>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <h4>Zadatak 1 - Ispis objekta</h4>
+    <div id="div1"></div>
+    <br />
+
+    <h4>Zadatak 2 - Validacija forme</h4>
+    <form
+      name="form1"
+      method="post"
+      action="nemame.php"
+      onsubmit="return(validacija())"
+    >
+      E-mail: <input type="text" id="text1" /><br />
+      Obavijest: 
+      <input type="radio" id="rad1" name="rad" /> Da
+      <input type="radio" id="rad2" name="rad" /> Ne<br />
+      <input type="submit" />
+    </form>
+
+    <p id="p1"></p>
+    <br />
+
+    <h4>Zadatak 3 - Napisati xml file</h4>
+    <p>Napisati zadanu tablicu kao xml file</p>
+
+    <h4>Zadatak 4 - Ispisati xml file kao tablicu</h4>
+    <div id="div2"></div>
+  </body>
+</body>
+</html>
